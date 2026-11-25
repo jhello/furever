@@ -1,0 +1,25 @@
+{
+  "name": "毛孩子 FurEver",
+  "short_name": "FurEver",
+  "description": "记录毛孩子的每一天",
+  "start_url": "/app/",
+  "scope": "/app/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fffdfb",
+  "theme_color": "#c2410c",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

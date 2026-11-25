@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FurEver 管理看板</title>
+    <link rel="stylesheet" href="/dashboard/dashboard.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="dash-header">
+        <div>
+          <p class="eyebrow">FurEver</p>
+          <h1>管理看板</h1>
+        </div>
+        <button id="logout" class="ghost" type="button" hidden>退出</button>
+      </header>
+
+      <section id="gate" class="card gate">
+        <h2>管理员验证</h2>
+        <p class="muted">请输入服务端显示的管理员令牌。令牌仅保存在当前浏览器会话中。</p>
+        <form id="token-form">
+          <label for="token">管理员令牌</label>
+          <div class="token-row">
+            <input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="X-Admin-Token" />
+            <button type="submit">进入看板</button>
+          </div>
+        </form>
+        <p id="gate-message" class="error" aria-live="polite"></p>
+      </section>
+
+      <main id="dashboard" hidden>
+        <div class="stats">
+          <div class="card stat">
+            <span class="stat-label">账户总数</span>
+            <strong id="stat-users">0</strong>
+          </div>
+          <div class="card stat">
+            <span class="stat-label">有效会话</span>
+            <strong id="stat-sessions">0</strong>
+          </div>
+          <div class="card stat">
+            <span class="stat-label">待重置链接</span>
+            <strong id="stat-resets">0</strong>
+          </div>
+        </div>
+
+        <section class="card panel">
+          <div class="panel-head">
+            <h2>账户列表</h2>
+            <span id="account-count" class="muted"></span>
+          </div>
+          <div id="accounts"></div>
+        </section>
+
+        <section class="card panel">
+          <div class="panel-head">
+            <h2>最近请求</h2>
+            <span class="muted">保留最近 200 条</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>时间</th><th>方法</th><th>路径</th><th>状态</th><th>耗时</th></tr>
+              </thead>
+              <tbody id="requests"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card panel">
+          <div class="panel-head"><h2>服务器信息</h2></div>
+          <dl id="server-info" class="info"></dl>
+        </section>
+      </main>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </div>
+    <script src="/dashboard/dashboard.js" defer></script>
+  </body>
+</html>

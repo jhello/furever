@@ -1,0 +1,34 @@
+[Unit]
+Description=FurEver (毛孩子) server
+Documentation=file:///opt/furever/README.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# 修改为实际运行用户与项目路径
+User=furever
+Group=furever
+WorkingDirectory=/opt/furever
+
+# 可选：从受权限保护的文件读取配置
+# EnvironmentFile=-/etc/furever/furever.env
+Environment=NODE_ENV=production
+Environment=FUREVER_HOST=0.0.0.0
+Environment=FUREVER_PORT=3000
+Environment=FUREVER_DATA_DIR=/opt/furever/data
+
+ExecStart=/usr/bin/node /opt/furever/server/src/server.js
+Restart=on-failure
+RestartSec=3
+KillSignal=SIGTERM
+TimeoutStopSec=10
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/furever/data
+
+[Install]
+WantedBy=multi-user.target
