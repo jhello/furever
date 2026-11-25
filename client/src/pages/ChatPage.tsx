@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import type { FormEvent } from 'react'
 import { OptionButtons } from '../components/OptionButtons'
-import { PageHeader } from '../components/PageHeader'
 import { PawIcon } from '../components/PawIcon'
 import { SettingsButton } from '../components/SettingsButton'
 import { useLanguage } from '../i18n'
@@ -493,7 +492,9 @@ export function ChatPage() {
 
   return (
     <div className="app-page chat-page">
-      <PageHeader title={t('appName')} showBack={false} right={<SettingsButton />} />
+      <div className="floating-header">
+        <SettingsButton />
+      </div>
 
       <div className="chat-scroll">
         <div className="chat-list">

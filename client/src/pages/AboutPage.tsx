@@ -1,4 +1,3 @@
-import { PageHeader } from '../components/PageHeader'
 import { PawIcon } from '../components/PawIcon'
 import { useLanguage } from '../i18n'
 
@@ -7,11 +6,9 @@ export function AboutPage() {
 
   return (
     <div className="app-page">
-      <PageHeader title={t('about')} />
       <main className="settings-content about-content">
         <div className="about-brand">
           <PawIcon size={44} />
-          <h2>{t('aboutTitle')}</h2>
           <p>{t('aboutDescription')}</p>
         </div>
         <dl className="about-list">

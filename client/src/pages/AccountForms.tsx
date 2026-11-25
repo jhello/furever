@@ -2,7 +2,6 @@ import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { api } from '../api'
-import { PageHeader } from '../components/PageHeader'
 import { useAuth } from '../context/AuthContext'
 import { useLanguage } from '../i18n'
 
@@ -40,7 +39,6 @@ export function ChangeEmailPage() {
 
   return (
     <div className="app-page">
-      <PageHeader title={t('changeEmail')} />
       <main className="settings-content">
         <form className="form card-form" onSubmit={handleSubmit}>
           <label>
@@ -89,7 +87,6 @@ export function ChangePasswordPage() {
 
   return (
     <div className="app-page">
-      <PageHeader title={t('changePassword')} />
       <main className="settings-content">
         <form className="form card-form" onSubmit={handleSubmit}>
           <label>
@@ -163,7 +160,6 @@ export function ForgotPasswordPage() {
 
   return (
     <div className="app-page">
-      <PageHeader title={t('forgotPassword')} />
       <main className="settings-content">
         <p className="hint">{t('forgotHint')}</p>
         {stage === 'request' ? (

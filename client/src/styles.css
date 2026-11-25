@@ -5,6 +5,7 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  --safe-top: env(safe-area-inset-top, 0px);
 }
 
 * {
@@ -32,31 +33,17 @@ button {
   display: flex;
   flex-direction: column;
   height: 100dvh;
+  padding-top: var(--safe-top);
   background: #fff;
 }
 
-.topbar {
+.floating-header {
   flex: none;
-  height: 56px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 12px;
-  border-bottom: 1px solid #e5e7eb;
-  background: #fff;
-}
-
-.topbar-left,
-.topbar-right {
-  display: flex;
-  align-items: center;
+  justify-content: flex-end;
   gap: 8px;
-}
-
-.topbar h1 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
+  padding: 10px 12px 0;
 }
 
 .icon-button {
@@ -318,6 +305,7 @@ button {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  padding-top: var(--safe-top);
   background: #f6f7f9;
 }
 
@@ -350,11 +338,6 @@ button {
   border: 1px solid #e5e7eb;
   border-radius: 50%;
   color: #4b5563;
-}
-
-.brand h1 {
-  margin: 12px 0 4px;
-  font-size: 24px;
 }
 
 .brand p {
@@ -574,12 +557,6 @@ button {
   color: #4b5563;
 }
 
-.about-brand h2 {
-  margin: 12px 0 6px;
-  font-size: 20px;
-  color: #1f2328;
-}
-
 .about-brand p {
   margin: 0;
   color: #6b7280;
@@ -621,6 +598,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: var(--safe-top);
   color: #6b7280;
   font-size: 14px;
 }

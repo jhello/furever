@@ -13,6 +13,8 @@
 - 聊天式主页（仿 ChatGPT 的问答引导，固定选项直接点击按钮）
 - 宠物信息采集向导（本地保存）
 - 设置页：账户与安全（更换邮箱、更改密码、忘记密码重置）、关于
+- 页面不显示标题栏；Android 使用系统返回键，iOS 使用左侧边缘右滑返回
+- 顶部控件避开系统状态栏 / 灵动岛等安全区域
 
 ## 本地运行
 
@@ -49,6 +51,10 @@ npx cap open android   # 用 Android Studio 打开并运行
 VITE_API_BASE_URL=http://<电脑IP>:3000 npm run build
 npx cap sync android
 ```
+
+## 应用图标
+
+图标源文件位于项目根目录的 `Flauschiger Pfotenabdruck auf Rosa.png`，已生成到 `client/android/app/src/main/res/mipmap-*`，同时配置了 Android 自适应图标。
 
 ## 数据说明
 

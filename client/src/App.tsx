@@ -7,6 +7,7 @@ import { SettingsPage } from './pages/SettingsPage'
 import { AccountSecurityPage } from './pages/AccountSecurityPage'
 import { ChangeEmailPage, ChangePasswordPage, ForgotPasswordPage } from './pages/AccountForms'
 import { AboutPage } from './pages/AboutPage'
+import { useNativeNavigation } from './hooks/useNativeNavigation'
 
 function AuthRoute() {
   const { user } = useAuth()
@@ -28,6 +29,8 @@ function ProtectedRoute() {
 }
 
 export default function App() {
+  useNativeNavigation()
+
   return (
     <LanguageProvider>
       <AuthProvider>

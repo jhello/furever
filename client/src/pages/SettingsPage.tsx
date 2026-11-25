@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import { LanguageToggle } from '../components/LanguageToggle'
-import { PageHeader } from '../components/PageHeader'
 import { useAuth } from '../context/AuthContext'
 import { useLanguage } from '../i18n'
 
@@ -11,7 +10,9 @@ export function SettingsPage() {
 
   return (
     <div className="app-page">
-      <PageHeader title={t('settings')} right={<LanguageToggle />} />
+      <div className="floating-header">
+        <LanguageToggle />
+      </div>
 
       <main className="settings-content">
         <section className="settings-section">

@@ -57,7 +57,6 @@ export function AuthPage() {
           <span className="brand-icon">
             <PawIcon size={34} />
           </span>
-          <h1>{t('appName')}</h1>
           <p>{t('englishName')} · {t('tagline')}</p>
         </div>
 

@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom'
-import { PageHeader } from '../components/PageHeader'
 import { useLanguage } from '../i18n'
 
 export function AccountSecurityPage() {
@@ -14,7 +13,6 @@ export function AccountSecurityPage() {
 
   return (
     <div className="app-page">
-      <PageHeader title={t('accountSecurity')} />
       <main className="settings-content">
         <section className="settings-section">
           {items.map((item) => (
