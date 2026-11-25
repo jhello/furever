@@ -34,6 +34,15 @@ npm run dev
 # http://localhost:5173
 ```
 
+也可以把服务端放到后台运行，日志和 PID 写在 `server/data/`，不会占用当前终端：
+
+```bash
+npm run server:start     # 后台启动
+npm run server:stop      # 停止
+npm run server:restart   # 重启
+npm run server:status    # 查看状态
+```
+
 Android（需要 JDK 21 与 Android SDK Platform 36 / Build-Tools 36）：
 
 ```bash
@@ -54,7 +63,7 @@ npx cap sync android
 
 ## 应用图标
 
-图标源文件位于项目根目录的 `Flauschiger Pfotenabdruck auf Rosa.png`，已生成到 `client/android/app/src/main/res/mipmap-*`，同时配置了 Android 自适应图标。
+应用图标已生成到 `client/android/app/src/main/res/mipmap-*`，包含各密度图标、圆形图标和自适应图标前景，同时配置了 Android 自适应图标背景色。
 
 ## 数据说明
 
