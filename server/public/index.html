@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FurEver 看板</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>毛孩子 FurEver</h1>
+        <p>服务端看板 · 仅保存账户登录信息</p>
+      </div>
+      <button id="refresh" type="button">刷新</button>
+    </header>
+
+    <main>
+      <section class="cards">
+        <div class="card">
+          <span>注册账户</span>
+          <strong id="totalAccounts">-</strong>
+        </div>
+        <div class="card">
+          <span>有效会话</span>
+          <strong id="activeSessions">-</strong>
+        </div>
+        <div class="card">
+          <span>待重置</span>
+          <strong id="pendingResets">-</strong>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">
+          <h2>账户列表</h2>
+          <span id="updatedAt"></span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>邮箱</th>
+                <th>注册时间</th>
+                <th>最近登录</th>
+              </tr>
+            </thead>
+            <tbody id="accountsBody">
+              <tr><td colspan="3" class="empty">加载中...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">宠物资料、聊天记录等信息不会上传到这里，全部保存在客户端本地。</p>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

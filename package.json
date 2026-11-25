@@ -1,0 +1,11 @@
+{
+  "name": "furever",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "android:sync": "npm --prefix client run cap:sync"
+  }
+}

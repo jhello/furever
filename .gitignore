@@ -1,0 +1,17 @@
+node_modules/
+dist/
+server/data/
+gradle-*.zip
+*.log
+*.tsbuildinfo
+.DS_Store
+.env
+.env.local
+
+android/.gradle/
+android/local.properties
+android/app/build/
+android/build/
+android/captures/
+android/.idea/
+android/*.iml
